@@ -1,0 +1,30 @@
+<config>
+	<nick>lovebot</nick>
+	<user>lub</user>
+	<ownerhost>espen@krypton.mrfjo.org</ownerhost>		
+	<server>
+		<ssl>0</ssl>
+		<host>steinan.org</host>
+		<port>6667</port>
+		<channel>#steinan</channel>
+		</server> 
+	<server>
+		<ssl>0</ssl>
+		<host>irc.efnet.org</host>
+		<port>6667</port>
+		<channel>#badr</channel>
+		<channel>#tihlde</channel>
+		</server> 
+		
+		<modules>
+			<module>TeamTimer</module>
+			<module>Asl</module>
+			<module>Annotation</module>
+			<module>Nach</module>
+			<module>Time</module>
+			<module>CurrencyConv</module>
+			<module>TvScheduleUsa</module>
+			<module>TvScheduleUsaYesterday</module>
+		</modules>
+		
+</config>

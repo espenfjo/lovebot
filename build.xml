@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="lovebot">
+    <description>
+        Lovebot 1(.5) in java
+    </description>
+ <property name="build" location="build"/>
+ <property name="mainsrc" location="main"/>
+ <property name="modulesrc" location="modules"/>
+
+	<target name="init">  
+          <mkdir dir="${build}"/>
+     </target>
+
+
+
+  <target name="compile" description="compile the main source" depends="init">
+    <javac srcdir="${mainsrc}" destdir="${build}"/>
+    <copy file="lovebot.xml" todir="${build}"/>
+
+  </target>
+
+  <target name="all" description="compile the modules source" depends="compile">
+	<javac srcdir="${modulesrc}" excludes="pre/*,pwz/*" destdir="${build}">
+		<classpath>
+			<pathelement location="main/"/>
+		</classpath>
+	</javac>
+</target>
+</project>
+
